@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/webstraservices/authentication-service/models"
+	"github.com/webstrasuite/authentication-service/models"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
