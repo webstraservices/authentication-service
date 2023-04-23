@@ -1,4 +1,4 @@
-module github.com/webstrasuite/authentication-service
+module github.com/webstrasuite/webstra-auth
 
 go 1.20
 
