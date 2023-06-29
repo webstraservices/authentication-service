@@ -7,8 +7,8 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/webstrasuite/webstra-auth/auth"
 	"github.com/webstrasuite/webstra-auth/pb"
+	"github.com/webstrasuite/webstra-auth/server"
 	"google.golang.org/grpc"
 )
 
@@ -30,7 +30,7 @@ func main() {
 
 	fmt.Println("Webstra Auth service running on", defaultPort)
 
-	s := auth.Server{}
+	s := server.Server{}
 
 	grpcServer := grpc.NewServer()
 
