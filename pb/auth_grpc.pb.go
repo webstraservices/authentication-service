@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	AuthService_Register_FullMethodName = "/webstra_auth.AuthService/Register"
-	AuthService_Login_FullMethodName    = "/webstra_auth.AuthService/Login"
-	AuthService_Validate_FullMethodName = "/webstra_auth.AuthService/Validate"
+	AuthService_Register_FullMethodName = "/pb.AuthService/Register"
+	AuthService_Login_FullMethodName    = "/pb.AuthService/Login"
+	AuthService_Validate_FullMethodName = "/pb.AuthService/Validate"
 )
 
 // AuthServiceClient is the client API for AuthService service.
@@ -162,7 +162,7 @@ func _AuthService_Validate_Handler(srv interface{}, ctx context.Context, dec fun
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var AuthService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "webstra_auth.AuthService",
+	ServiceName: "pb.AuthService",
 	HandlerType: (*AuthServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
