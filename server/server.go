@@ -25,8 +25,16 @@ func (s *Server) Register(ctx context.Context, req *pb.RegisterRequest) (*pb.Reg
 }
 
 func (s *Server) Validate(ctx context.Context, req *pb.ValidateRequest) (*pb.ValidateResponse, error) {
-	return &pb.ValidateResponse{
-		Status: http.StatusOK,
-		UserId: 1,
-	}, nil
+	resp := pb.ValidateResponse{
+		Status: http.StatusUnauthorized,
+		Error:  "failed to validate token",
+		UserId: 0,
+	}
+	if req.Token == "fail" {
+		return &resp, nil
+	}
+
+	resp.UserId = 1
+
+	return &resp, nil
 }
